@@ -21,18 +21,6 @@ abstract public class Piece {
     }
 
     /**
-     * makes an array of 4 points from 8 coordinates
-     */
-    private Point[] coordsToArray(int... coords) {
-        if (coords.length!=8) throw new IllegalArgumentException("missing coords");
-        Point[] pts = new Point[4];
-        for (int i=0; i<coords.length; i+=2) {
-            pts[i/2] = new Point(coords[i], coords[i+1]);
-        }
-        return pts;
-    }
-
-    /**
      * changes piece coordinates by rotating it left, if possible
      */
     public void rotate() {
